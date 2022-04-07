@@ -24,6 +24,7 @@ const Navbar = () => {
                     </li>
                     <li className='pt-1'><Link to={'/'}>Home</Link></li>
                     <li className='pt-1'><Link to={'/'}>Products</Link></li>
+                    <li className='pt-1'><Link to={'/login'}>Log In</Link></li>
                     {/* <li className=''><Link to={'/'}><button className='px-3 rounded-lg tracking-wider h-10 bg-palette-lightblue text-white'>Login</button></Link></li> */}
                 </ul>
                 <ul className='flex items-center gap-8'>
