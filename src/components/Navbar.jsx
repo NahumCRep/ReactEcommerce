@@ -6,7 +6,7 @@ import Cart from './Cart'
 
 const Navbar = () => {
     return (
-        <nav className='w-full h-16 px-11 fixed bg-white border-b-2 border-palette-lightgray flex items-center justify-between'>
+        <nav className='w-full h-16 px-12 fixed z-50 bg-white border-b-2 border-palette-lightgray flex items-center justify-between'>
             <Link to='/'>
                 <div className='flex gap-1 items-center font-neue text-2xl font-bold text-palette-teal'>
                     <p className='pt-1'>DN</p>
@@ -22,16 +22,17 @@ const Navbar = () => {
                             <button className='outline-none border-none bg-none'><FaSearch /></button>
                         </div>
                     </li>
-                    <li className='pt-1'><Link to={'/'}>Home</Link></li>
-                    <li className='pt-1'><Link to={'/'}>Products</Link></li>
-                    {/* <li className=''><Link to={'/'}><button className='px-3 rounded-lg tracking-wider h-10 bg-palette-lightblue text-white'>Login</button></Link></li> */}
+                    <li className='pt-2'><Link to={'/'}>Home</Link></li>
+                    <li className='pt-2'><Link to={'/'}>Products</Link></li>
+                    {/* <li className='pt-2'><Link to={'/payment'}>Payment</Link></li> */}
+                    <li className=''><Link to={'/'}><button className='px-3 rounded-lg tracking-wider h-10 bg-palette-lightblue text-white'>Login</button></Link></li>
                 </ul>
-                <ul className='flex items-center gap-8'>
+                {/* <ul className='flex items-center gap-8'>
                     <li><Cart /></li>
                     <li>
                         <div className='w-9 h-9 rounded-full bg-palette-teal'></div>
                     </li>    
-                </ul>                    
+                </ul>                     */}
             </div>
 
         </nav>
