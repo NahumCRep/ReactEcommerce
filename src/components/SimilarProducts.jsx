@@ -35,9 +35,9 @@ const similars = [
 ]
 const SimilarProducts = () => {
   return (
-    <div>
+    <div >
         <h3 className='text-palette-dark text-xl'>Similar Products</h3>
-        <div className='flex gap-3'>
+        <div className='flex flex-wrap gap-3 mt-3'>
             {similars.map((item) =>(
                 <ProductCard key={item.id} product={item}/>
             ))}

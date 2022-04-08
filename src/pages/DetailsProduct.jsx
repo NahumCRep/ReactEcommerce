@@ -21,7 +21,7 @@ const DetailsProduct = () => {
 
  
   return (
-    <main className=' w-full h-screen pt-16 px-10 flex flex-col'>
+    <main className=' w-full h-screen  pt-10 md:pt-16 px-5 md:px-10 flex flex-col'>
         {isLoading ? <Logo size="200px"/> : <ShowProduct product={product}/>}
     </main>
    )
