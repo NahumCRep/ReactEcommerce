@@ -22,17 +22,10 @@ const Navbar = () => {
                             <button className='outline-none border-none bg-none'><FaSearch /></button>
                         </div>
                     </li>
-<<<<<<< HEAD
-                    <li className='pt-2'><Link to={'/'}>Home</Link></li>
-                    <li className='pt-2'><Link to={'/'}>Products</Link></li>
-                    {/* <li className='pt-2'><Link to={'/payment'}>Payment</Link></li> */}
-                    <li className=''><Link to={'/'}><button className='px-3 rounded-lg tracking-wider h-10 bg-palette-lightblue text-white'>Login</button></Link></li>
-=======
                     <li className='pt-1'><Link to={'/'}>Home</Link></li>
                     <li className='pt-1'><Link to={'/products'}>Products</Link></li>
                     <li className='pt-1'><Link to={'/login'}>Log In</Link></li>
                     {/* <li className=''><Link to={'/'}><button className='px-3 rounded-lg tracking-wider h-10 bg-palette-lightblue text-white'>Login</button></Link></li> */}
->>>>>>> d28319ca18dee96600d4aa7f1deb8af1140822ef
                 </ul>
                 {/* <ul className='flex items-center gap-8'>
                     <li><Cart /></li>
