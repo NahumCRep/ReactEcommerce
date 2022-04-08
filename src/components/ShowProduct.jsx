@@ -1,6 +1,7 @@
 import React from 'react'
 import ProductDetails from './ProductDetails'
 import ProductInfo from './ProductInfo'
+import SimilarProducts from './SimilarProducts'
 
 
 const ShowProduct = ({product}) => {
@@ -8,6 +9,7 @@ const ShowProduct = ({product}) => {
       <div>
         <ProductInfo product={product}/>
         <ProductDetails/>
+        <SimilarProducts/>
       </div>
 
   )

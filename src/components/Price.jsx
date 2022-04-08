@@ -5,6 +5,7 @@ import PriceLabel from './PriceLabel'
 const Price = ({price, size}) => {
     // MD detailsProduct
    const PRICE_SIZE = {
+       SM: 'my-4',
        MD: 'my-7'
    }
    
