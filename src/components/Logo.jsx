@@ -18,7 +18,7 @@ const pathVariants = {
 }
 const Logo = ({size='48px'}) => {
   return (
-    <svg width={size} height={size} viewBox="0 0 48 48" version="1" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 48 48">
+    <svg width={size} height={size} viewBox="0 0 48 48" version="1" xmlns="http://www.w3.org/2000/svg" enableBackground="new 0 0 48 48">
         <motion.path 
           variants={pathVariants}
           initial="hidden"
