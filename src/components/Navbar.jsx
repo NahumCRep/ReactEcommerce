@@ -27,12 +27,12 @@ const Navbar = () => {
                     <li className='pt-1'><Link to={'/login'}>Log In</Link></li>
                     {/* <li className=''><Link to={'/'}><button className='px-3 rounded-lg tracking-wider h-10 bg-palette-lightblue text-white'>Login</button></Link></li> */}
                 </ul>
-                {/* <ul className='flex items-center gap-8'>
+                <ul className='flex items-center gap-8'>
                     <li><Cart /></li>
                     <li>
                         <div className='w-9 h-9 rounded-full bg-palette-teal'></div>
                     </li>    
-                </ul>                     */}
+                </ul>                    
             </div>
 
         </nav>

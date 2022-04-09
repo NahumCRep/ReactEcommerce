@@ -4,6 +4,7 @@ import { useSearchParams } from 'react-router-dom'
 import { BiCategoryAlt } from 'react-icons/bi'
 import ProductsSection from '../components/Product/ProductsSection'
 import ProductCard from '../components/Product/ProductCard'
+import ProductCardLoading from '../components/Product/ProductCardLoading'
 
 const Products = () => {
     const [data, setData] = useState([]);
@@ -86,7 +87,7 @@ const Products = () => {
                                         )
                                     })
                                 )
-                                : null
+                                : <ProductCardLoading sizeCard="md" />
                         }
                     </ProductsSection>
                 </div>
