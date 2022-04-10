@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react'
+
 import { useParams } from 'react-router-dom'
 import Logo from '../components/Logo';
 import ShowProduct from '../components/ShowProduct';
+
 
 
 const DetailsProduct = () => {

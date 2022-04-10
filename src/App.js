@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { DetailsProduct, Home, Login, Products } from './pages'
+import { Cart, DetailsProduct, Home, Login, Products } from './pages'
 import Navbar from './components/Navbar';
 
 
@@ -12,6 +12,7 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/products' element={<Products />} />
         <Route path='/products/:id' element={<DetailsProduct />} />
+        <Route path='/cart' element={<Cart />} />
       </Routes>
     </BrowserRouter>
   );
