@@ -12,8 +12,11 @@ const get = async (url) => {
 }
 
 const post = async (url, data) => {
+    console.log("data api")
+    console.log(data)
     return await instance.post(url, data, {
-        withCredentials: true
+        withCredentials: true,
+        "content-type":"application/json",
     })
 }
 
