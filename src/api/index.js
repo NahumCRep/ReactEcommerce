@@ -1,4 +1,5 @@
 import axios from "axios";
+import { async } from "q";
 import { URL } from "../config";
 
 const instance = axios.create({
