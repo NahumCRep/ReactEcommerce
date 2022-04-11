@@ -4,6 +4,7 @@ import Logo from '../components/Logo';
 import ShowProduct from '../components/ShowProduct';
 
 
+
 const DetailsProduct = () => {
     const { id } = useParams();
     const [product, setProduct] = useState([]);
