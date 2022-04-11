@@ -39,6 +39,7 @@ const InfoCart = ({cart}) => {
     useEffect(() => {
         getProductsCart()
         getProducts()
+        console.log(carrito)
     }, [])
 
   return (
@@ -60,7 +61,7 @@ const InfoCart = ({cart}) => {
                     <div className='flex flex-col justify-around'>
                         <div className='flex gap-3 h-10'>
                             <button className='h-full w-10 border-2 font-bold' >-</button>
-                            <div className='h-full w-10 border-2 border-palette-lightblue text-center font-bold'>{carrito[0].quantity}</div>
+                            <div className='h-full w-10 border-2 border-palette-lightblue text-center font-bold'>{carrito.productQuantity}</div>
                             <button className='h-full w-10 border-2 font-bold'>+</button>
                         </div>
                         <button className=' text-palette-lightblue ml-auto'><MdDelete className='w-10 h-10'/></button>
