@@ -27,7 +27,6 @@ const Navbar = () => {
                     </li>
                     <li className='pt-1'><Link to={'/'}>Home</Link></li>
                     <li className='pt-1'><Link to={'/products'}>Products</Link></li>
-                    <li className='pt-1'><Link to={'/payment'}>Payment</Link></li>
                     {
                         !user.logged &&  <li className='pt-1'><Link to={'/login'}>Log In</Link></li>
                     }

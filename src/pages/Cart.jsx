@@ -17,7 +17,7 @@ const Cart = () => {
                     <Link to={'/products'} className='text-white bg-palette-teal rounded-lg px-8 py-2 font-josefina'>Continue Shopping</Link>
                     <span>Products ({cart.length})</span>
                     {console.log(cart)}
-                    <Link to={'/'} className='text-white bg-palette-dark rounded-lg px-8 py-2 font-josefina uppercase'>Checkout Now</Link>
+                    <Link to={'/payment'} className='text-white bg-palette-dark rounded-lg px-8 py-2 font-josefina uppercase'>Checkout Now</Link>
                 </div>
                 <div className='flex justify-between'>
                     <InfoCart />

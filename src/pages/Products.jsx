@@ -61,14 +61,20 @@ const Products = () => {
                 </div>
             </div>
             <section className='w-full h-auto flex'>
-                <aside className='w-[20%] h-auto  min-h-screen bg-slate-500'>
-                    <ul className='w-full'>
+                <aside className='w-[20%] h-auto  min-h-screen border-r-2 border-palette-lightgray'>
+                    <ul className='w-full px-2 mt-2'>
                         {
                             allCategories
                                 ? (
                                     allCategories.map((catg, index) => {
                                         return (
-                                            <li key={index}><Link to={`/products?category=${catg}`}>{catg}</Link></li>
+                                            <li key={index}>
+                                                <Link to={`/products?category=${catg}`}>
+                                                    <button className='w-full h-11 flex items-center  bg-white p-3 text-left transition-colors duration-700 ease-in-out hover:bg-palette-lightgray'>
+                                                        {catg}
+                                                    </button>
+                                                </Link>
+                                            </li>
                                         )
                                     })
                                 )
@@ -79,7 +85,7 @@ const Products = () => {
                 <div className='flex-grow max-w-[80%] px-1'>
                     <ProductsSection>
                         {
-                            data
+                            !isLoading
                                 ? (
                                     data.map((prod) => {
                                         return (
@@ -87,7 +93,7 @@ const Products = () => {
                                         )
                                     })
                                 )
-                                : <ProductCardLoading sizeCard="md" />
+                                : <div className='w-full'><ProductCardLoading sizeCard="md" /></div>
                         }
                     </ProductsSection>
                 </div>
