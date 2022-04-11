@@ -12,7 +12,7 @@ const ProductData = ({data}) => {
   const dispatch = useDispatch()
   
   const saveProductToCart = () => {
-    dispatch(addCart({prodId:data.id, prodQuantity:productQuantity, prodPrice:data.price}))
+    dispatch(addCart({...data, quantity:productQuantity}))
   }
 
   const incrementProductQuantity = () => {

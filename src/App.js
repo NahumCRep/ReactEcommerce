@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { DetailsProduct, Home, Login, Products, Payment, Cart } from './pages'
+import { DetailsProduct, Home, Login, Products, Payment, Cart, Done } from './pages'
 import Navbar from './components/Navbar';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
@@ -20,6 +20,7 @@ function App() {
         <Route path='/products/:id' element={<DetailsProduct />} />
         <Route path='/cart' element={<Cart />} />
         <Route path='/payment' element={<Payment />} />
+        <Route path='/payment/done' element={<Done />} />
       </Routes>
     </BrowserRouter>
   );

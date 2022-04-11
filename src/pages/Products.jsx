@@ -83,7 +83,7 @@ const Products = () => {
                                 ? (
                                     data.map((prod) => {
                                         return (
-                                            <ProductCard productData={prod} cardSize="md" />
+                                            <ProductCard key={prod.id} productData={prod} cardSize="md" />
                                         )
                                     })
                                 )
