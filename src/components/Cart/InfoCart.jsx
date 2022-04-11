@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import { useState } from 'react'
 import rectangle from '../../svg/Rectangle11.svg'
 import Price from '../Price'
+import {MdDelete} from 'react-icons/md'
 
 const InfoCart = ({cart}) => {
     const [products, setProducts] = useState([])
@@ -41,7 +42,7 @@ const InfoCart = ({cart}) => {
     }, [])
 
   return (
-    <div className='flex-3'> {/*info*/}
+    <div className='flex-1'> {/*info*/}
        <div className='flex flex-col gap-4 border-2 border-palette-teal'>{/*product*/}
             {products.map((prod,i)=>(
                 <div className='grid grid-cols-3 gap-4 shadow-md px-5 py-7' key={prod.id}> {/*producDetail*/}
@@ -62,7 +63,7 @@ const InfoCart = ({cart}) => {
                             <div className='h-full w-10 border-2 border-palette-lightblue text-center font-bold'>{carrito[0].quantity}</div>
                             <button className='h-full w-10 border-2 font-bold'>+</button>
                         </div>
-                        <button>Delete</button>
+                        <button className=' text-palette-lightblue ml-auto'><MdDelete className='w-10 h-10'/></button>
                     </div>
                 </div>
             ))}
