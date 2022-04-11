@@ -3,8 +3,11 @@ import { Link } from 'react-router-dom'
 import { FaSearch } from 'react-icons/fa'
 import { FcElectronics } from 'react-icons/fc'
 import Cart from './Cart'
+import { useSelector } from 'react-redux'
 
 const Navbar = () => {
+    const user = useSelector(state => state.user)
+    console.log('usuario', user)
     return (
         <nav className='w-full h-16 px-12 fixed z-50 bg-white border-b-2 border-palette-lightgray flex items-center justify-between'>
             <Link to='/'>
@@ -24,15 +27,22 @@ const Navbar = () => {
                     </li>
                     <li className='pt-1'><Link to={'/'}>Home</Link></li>
                     <li className='pt-1'><Link to={'/products'}>Products</Link></li>
-                    <li className='pt-1'><Link to={'/login'}>Log In</Link></li>
+                    <li className='pt-1'><Link to={'/payment'}>Payment</Link></li>
+                    {
+                        !user.logged &&  <li className='pt-1'><Link to={'/login'}>Log In</Link></li>
+                    }
                     {/* <li className=''><Link to={'/'}><button className='px-3 rounded-lg tracking-wider h-10 bg-palette-lightblue text-white'>Login</button></Link></li> */}
                 </ul>
-                <ul className='flex items-center gap-8'>
-                    <li><Cart /></li>
-                    <li>
-                        <div className='w-9 h-9 rounded-full bg-palette-teal'></div>
-                    </li>    
-                </ul>                    
+                {
+                    user.logged && (
+                        <ul className='flex items-center gap-8'>
+                            <li><Cart /></li>
+                            <li>
+                                <div className='w-9 h-9 rounded-full bg-palette-teal'></div>
+                            </li>
+                        </ul>
+                    )
+                }
             </div>
 
         </nav>

@@ -11,11 +11,16 @@ const get = async (url) => {
     })
 }
 
-const post = async (url, data) => {
-    return await instance.post(url, data, {
-        withCredentials: true
-    })
+const post = async (url, data, token) => {
+    const config = {
+        headers: { Authorization: `Bearer ${token}` }
+    };
+    return await instance.post(url, data, config)
+}
+
+const postLogin = async (url, data) => {
+    return await instance.post(url, data)
 }
 
 export default instance
-export { get, post }
+export { get, post, postLogin }

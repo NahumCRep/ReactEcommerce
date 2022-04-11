@@ -1,9 +1,15 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { Cart, DetailsProduct, Home, Login, Products } from './pages'
+import { DetailsProduct, Home, Login, Products, Payment, Cart } from './pages'
 import Navbar from './components/Navbar';
-
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { validate } from './features/user/userSlice';
 
 function App() {
+  const dispatch = useDispatch()
+  // useEffect(()=>{
+  //   dispatch(validate())
+  // },[])
   return (
     <BrowserRouter>
       <Navbar />
@@ -13,6 +19,7 @@ function App() {
         <Route path='/products' element={<Products />} />
         <Route path='/products/:id' element={<DetailsProduct />} />
         <Route path='/cart' element={<Cart />} />
+        <Route path='/payment' element={<Payment />} />
       </Routes>
     </BrowserRouter>
   );
