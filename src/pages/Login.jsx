@@ -2,6 +2,8 @@ import React from 'react'
 import { motion } from "framer-motion"
 import { useState } from 'react'
 import Logo from '../components/Logo'
+import {useSelector,useDispatch} from 'react-redux'
+import { login } from '../features/user/userSlice'
 
 const Login = () => {
   const [emailL,setEmailL] = useState("")
