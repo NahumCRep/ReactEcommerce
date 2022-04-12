@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import Logo from '../components/Logo';
 import ShowProduct from '../components/ShowProduct';
+import ShowProductLoading from '../components/ShowProductLoading';
 
 
 
@@ -24,7 +25,8 @@ const DetailsProduct = () => {
  
   return (
     <main className=' w-full h-screen  pt-10 md:pt-16 px-5 md:px-10 flex flex-col'>
-        {isLoading ? <Logo size="200px"/> : <ShowProduct product={product}/>}
+        {isLoading ? <ShowProductLoading/> : <ShowProduct product={product}/>}
+        {/*<ShowProductLoading/>*/}
     </main>
    )
 }
