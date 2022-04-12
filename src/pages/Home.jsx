@@ -14,7 +14,6 @@ const Home = () => {
     fetch('https://fakestoreapi.com/products?limit=8')
       .then(res => res.json())
       .then(json => {
-        console.log(json)
         setPopularProducts(json)
       })
   }
@@ -23,7 +22,6 @@ const Home = () => {
     fetch('https://fakestoreapi.com/products?limit=4')
       .then(res => res.json())
       .then(json => {
-        console.log(json)
         setOfferProducts(json)
       })
   }
@@ -56,7 +54,7 @@ const Home = () => {
             )
           })}
         </ProductsSection>
-        <Link to={"/"}><button className='w-40 h-11 mt-8 float-right   bg-palette-teal text-white font-josefina'>more</button></Link>
+        <Link to={"/products"}><button className='w-40 h-11 mt-8 float-right   bg-palette-teal text-white font-josefina'>more</button></Link>
       </section>
       <section className='mt-44 px-5 md:px-12 relative bg-palette-teal py-14 flex flex-col items-center'>
         <div className='w-56 h-24 absolute left-5 md:left-12 -top-12 bg-palette-dark flex items-center justify-center '>

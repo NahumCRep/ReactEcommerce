@@ -13,10 +13,9 @@ const Products = () => {
     let componentMounted = true;
 
     const getProducts = async (searchValue) => {
-        console.log(searchValue)
         let routeApi = ""
         searchValue ? routeApi = `products/category/${searchValue}` : routeApi = 'products'
-        console.log(routeApi)
+        // console.log(routeApi)
         setIsLoading(true);
         const res = await fetch(`https://fakestoreapi.com/${routeApi}`);
         if (componentMounted) {
@@ -40,7 +39,6 @@ const Products = () => {
         fetch('https://fakestoreapi.com/products/categories')
             .then(res => res.json())
             .then(json => {
-                console.log('categories', json)
                 setAllCategories(json)
             })
     }

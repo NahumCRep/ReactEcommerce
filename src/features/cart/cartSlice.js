@@ -5,16 +5,13 @@ const cartSlice = createSlice({
     initialState:[],
     reducers:{
         addCart(state, action){
-            console.log('action',action)
             let newState = []
             if(state.length !== 0){
                 state.forEach((item)=>{
                     if(item.id == action.payload.id){
-                        console.log('entrar igual')
                         item.quantity = item.quantity + 1
                         newState = state
                     }else{
-                        console.log('entrar else')
                         newState = [...state, action.payload]
                     }
                 })

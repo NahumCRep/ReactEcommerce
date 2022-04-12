@@ -7,7 +7,6 @@ import { useSelector } from 'react-redux'
 
 const Navbar = () => {
     const user = useSelector(state => state.user)
-    console.log('usuario', user)
     return (
         <nav className='w-full h-16 px-12 fixed z-50 bg-white border-b-2 border-palette-lightgray flex items-center justify-between'>
             <Link to='/'>

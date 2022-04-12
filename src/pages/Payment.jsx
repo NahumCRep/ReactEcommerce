@@ -18,9 +18,7 @@ const Payment = () => {
         cart.forEach((product) => {
             totalAmount += Number(product.price) * Number(product.quantity)
         })
-        console.log('monto total',totalAmount)
         setTotalProductsAmount(totalAmount)
-        console.log('monto en centavos',totalAmount*100)
         post("/orders", {
             amount: (totalAmount * 100)
         }, user.token)

@@ -8,7 +8,7 @@ const Quantity = ({quantityState, incrementQuantity, decrementQuantity}) => {
        <p className='text-palette-dark text-lg'>quantity</p>
        <div className='flex gap-3 h-10'>
            <button onClick={()=>decrementQuantity()} className='h-full w-10 border-2 font-bold'>-</button>
-           <div className='h-full w-10 border-2 border-palette-lightblue text-center font-bold'>{quantityState}</div>
+           <div className='h-full w-10 border-2 border-palette-lightblue text-center font-bold flex items-center justify-center'>{quantityState}</div>
            <button onClick={()=>incrementQuantity()} className='h-full w-10 border-2 font-bold'>+</button>
        </div>
     </div>
