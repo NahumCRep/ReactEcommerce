@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { validate } from './features/user/userSlice';
+import Footer from './components/Footer';
 
 function App() {
   const dispatch = useDispatch()
@@ -22,6 +23,7 @@ function App() {
         <Route path='/payment' element={<Payment />} />
         <Route path='/payment/done' element={<Done />} />
       </Routes>
+      <Footer/>
     </BrowserRouter>
   );
 }
